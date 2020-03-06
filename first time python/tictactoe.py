@@ -1,7 +1,7 @@
 tictactoe = [[0,0,0],[0,0,0],[0,0,0]]
 
 
-class game_board(object):
+class Game_Board(object):
 	tictactoe = [[0,0,0],[0,0,0],[0,0,0]]
 	def print_game():
 		print("   a  b  c")
@@ -13,9 +13,9 @@ class game_board(object):
 		for count, row in enumerate(tictactoe):
 			print(count,row)
 
-game_board.print_game()
+Game_Board.print_game()
 
-game_board.play_round(1,1)
+Game_Board.play_round(1,1)
 
-game_board.print_game()
+Game_Board.print_game()
 
