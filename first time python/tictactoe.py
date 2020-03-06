@@ -8,10 +8,13 @@ class Game_Board(object):
 		for count, row in enumerate(tictactoe):
 			print(count,row)
 	def play_round(x,y):
-		print("   a  b  c")
-		tictactoe[x][y]=1
-		for count, row in enumerate(tictactoe):
-			print(count,row)
+		try:
+			print("   a  b  c")
+			tictactoe[x][y]=1
+			for count, row in enumerate(tictactoe):
+				print(count,row)
+		except:
+			print("something went wrong!!!")
 
 Game_Board.print_game()
 
