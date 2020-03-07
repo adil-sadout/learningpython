@@ -10,10 +10,18 @@ def print_game():
 
 
 
-def winner(lst,x):
-   return lst[x][1:] == lst[x][:-1]
+def winner(lst,x,y):
+	for row in tictactoe:
+		print(row[y] ,tictactoe[x][y])
 
+	if tictactoe[x][y] != tictactoe[x]:
+		return False
 
+	for row in tictactoe:
+		if row[y] != tictactoe[x][y]:
+			return False
+	
+	
 def play_round(x,y):
 	try:
 		print("   0  1  2")
@@ -22,7 +30,7 @@ def play_round(x,y):
 
 			print(count,row)
 
-		if winner(tictactoe,x)== True:
+		if winner(tictactoe,x,y)== True:
 				print("You have won")
 		
 	except:
@@ -30,12 +38,7 @@ def play_round(x,y):
 
 
 
-
-play_round(0,1)
 play_round(0,2)
 
 
-
-
-
-
+play_round(2,2)
